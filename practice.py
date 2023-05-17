@@ -7,5 +7,15 @@ ABAK7total = [115, 125, 200, 102, 175, 99, 151, 136, 109, 198, 84]
 ABAK7Ram = [104, 112, 195, 98, 152, 82, 132, 121, 101, 169, 73]
 ABAK7Amo = [11, 13, 15, 4, 23, 17, 19, 15, 8, 29, 11]
 
-avg = sum(AB7total)/len(ABAK7total)
-print(int(avg))
+import statistics
+
+def analytics(x):
+    return ("avg =  " + str(sum(x) / len(x))), "n = " + str(len(x)), "stdev = " + str(statistics.stdev(x))
+a = analytics(AB7total)
+print(a)
+b = analytics(AB7Ram)
+print(b)
+c = analytics(ABAmo)
+print(c)
+d = analytics(ABAK7total)
+print(d)
